@@ -1,0 +1,6 @@
+{
+		"heightChangeDelta": 0.01,
+		"buildOnGrid": false,
+		"defaultSnapToGridCenter": false,
+		"defaultGridSubdivision": 1.0
+}

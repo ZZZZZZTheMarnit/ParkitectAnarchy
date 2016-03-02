@@ -1,2 +1,2 @@
-# ParkitectAnarchy
-Construction Anarchy for Parkitect
+#ConstructionAnarchy
+Removes some building restrictions for assets.
