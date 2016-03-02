@@ -31,6 +31,6 @@ namespace Anarchy
         public string Name { get { return "Construction Anarchy"; } }
         public string Description { get { return "Lifts building restrictions for assets."; } }
         public string Path { get; set; }
-        public string Identifier { get; set; {} }
+        public string Identifier { get; set; }
     }
 }
