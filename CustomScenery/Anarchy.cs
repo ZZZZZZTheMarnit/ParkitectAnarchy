@@ -32,11 +32,12 @@ public class AnarchyObject : MonoBehaviour
 	}
     public void Enable()
     {
+		if(isenabled==true) {
+			Disable();
+		}
         List<Deco> list =  AssetManager.Instance.getDecoObjects().ToList();
         foreach (Deco D in list) {
-			if(isenabled==false) {
-				data[D.ToString()] = new Dictionary<string, string>();
-			}
+			data[D.ToString()] = new Dictionary<string, string>();
 			foreach (KeyValuePair<string, object> S in settings)
 			{
 				try{
@@ -52,9 +53,7 @@ public class AnarchyObject : MonoBehaviour
 							((((float)(double)S.Value)>0)&&(((float)(double)S.Value)<(float.Parse(D.GetType().GetField(S.Key).GetValue(D).ToString()))))||
 							((bool)settings["anarchyEnforced"])
 							){
-								if(isenabled==false) {
-									data[D.ToString()].Add(S.Key, D.GetType().GetField(S.Key).GetValue(D).ToString());
-								}
+								data[D.ToString()].Add(S.Key, D.GetType().GetField(S.Key).GetValue(D).ToString());
 								type = D.GetType().GetField(S.Key).GetValue(D).GetType();
 								if(type==typeof(float)) {
 									D.GetType().GetField(S.Key).SetValue(D,(float)(double)S.Value);
@@ -76,24 +75,26 @@ public class AnarchyObject : MonoBehaviour
     }
 	public void Disable()
     {
-        List<Deco> list =  AssetManager.Instance.getDecoObjects().ToList();
-        foreach (Deco D in list) {
-			foreach (KeyValuePair<string, string> S in data[D.ToString()])
-			{
-				try {
-					type = D.GetType().GetField(S.Key).GetValue(D).GetType();
-					if(type==typeof(float)) {
-						D.GetType().GetField(S.Key).SetValue(D,float.Parse(S.Value));
-					} else if(type==typeof(bool)) {
-						D.GetType().GetField(S.Key).SetValue(D,bool.Parse(S.Value));
-					} else {
-						WriteToFile("Disable: "+type+": Type unsupported ("+S.Key+")");
+		if(isenabled == true) {
+			List<Deco> list =  AssetManager.Instance.getDecoObjects().ToList();
+			foreach (Deco D in list) {
+				foreach (KeyValuePair<string, string> S in data[D.ToString()])
+				{
+					try {
+						type = D.GetType().GetField(S.Key).GetValue(D).GetType();
+						if(type==typeof(float)) {
+							D.GetType().GetField(S.Key).SetValue(D,float.Parse(S.Value));
+						} else if(type==typeof(bool)) {
+							D.GetType().GetField(S.Key).SetValue(D,bool.Parse(S.Value));
+						} else {
+							WriteToFile("Disable: "+type+": Type unsupported ("+S.Key+")");
+						}
+					} catch {
+						WriteToFile("Disable: "+S.Key+": Field unsupported");
 					}
-				} catch {
-					WriteToFile("Disable: "+S.Key+": Field unsupported");
 				}
 			}
-        }
+		}
 		isenabled = false;
     }
 	public void WriteToFile(string text) {
