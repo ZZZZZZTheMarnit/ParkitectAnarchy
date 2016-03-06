@@ -1,99 +1,125 @@
--------------------------------------------------
+--------------------------------------------------
+
+
+2.1.0 - Customisation Update (2016-03-06)
+
+
+
+--------------------------------------------------
+
+Added settings panel to mod interface to alter overide values
+Added hotkey to toggle Construction Anarchy
+Added anarchyEnabled setting to toggle Construction Anarchy
+Added anarchyEnforced setting to always replace all settings
+Added anarchyHotkey setting for the anarchy hotkey selection
+heightChangeDelta will not be changed if the original object's setting is less restrictive (Unless anarchyEnforced is on)
+defaultGridSubdivision will not be changed if the original object's setting is less restrictive (Unless anarchyEnforced is on)
+buildOnGrid moved in settings file to avoid conflict with defaultGridSubdivision
+-------------------------------------------
+
+
+-------
+
+
+--------------------------------------------------
 
 
 2.0.2 - Anarchy Unleashed (2016-03-05)
 
 
 
--------------------------------------------------
+--------------------------------------------------
 
 Fixed issues related to incorrect upload of 2.0.1
 Renamed files to prevent other uploading errors
 Renamed one "Special Thanks" member
-------------------------------------------
+-------------------------------------------
 
 
 -------
 
 
--------------------------------------------------
+--------------------------------------------------
 
 
 2.0.1 - Anarchy Unleashed (2016-03-02)
 
 
 
--------------------------------------------------
+--------------------------------------------------
 
 Fixed issues loading Construction Anarchy
--------------------------------------------------
+--------------------------------------------------
 
 
 
 
 
--------------------------------------------------
+--------------------------------------------------
 
 
 2.0.0 - Anarchy Unleashed (2016-03-02)
 
 
 
--------------------------------------------------
+--------------------------------------------------
 
 
 Complete rewrite, new repository...
 Can now be enabled and disabled in mod menu.
 Now works on any asset object.
--------------------------------------------------
+--------------------------------------------------
 
 
 
 
 
--------------------------------------------------
+--------------------------------------------------
 
 
 1.9.0 - Moving Repositories (2016-03-02)
 
 
 
--------------------------------------------------
+--------------------------------------------------
 
 Due to how parkitect loads mods this mod
 now requires a different repository for
 maximum support, please update again.
--------------------------------------------------
+--------------------------------------------------
 
 
 
 
 
--------------------------------------------------
+--------------------------------------------------
 
 
 1.0.0 - Initial Release (2016-02-25)
 
 
 
--------------------------------------------------
+--------------------------------------------------
 
 
 Mod Created
 
--------------------------------------------------
+--------------------------------------------------
 
 
 
 
 
--------------------------------------------------
+--------------------------------------------------
 
 Special Thanks
 
--------------------------------------------------
+--------------------------------------------------
 
-Muuuh - Requesting less build restrictions
-H-POPS - His work using Deco objects list
-Quexten - A lot of help debugging problems
--------------------------------------------------
+Muuuh		- Requesting less build restrictions
+Kev-vink	- Requesting toggle hotkey
+Quexten		- A lot of help debugging problems
+H-POPS		- His work using Deco objects list
+Mpollend	- His work using the settings panel
+LuukHolleman	- His work using hotkeys
+--------------------------------------------------

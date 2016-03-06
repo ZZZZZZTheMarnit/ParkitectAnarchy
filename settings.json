@@ -1,6 +1,9 @@
 {
-		"heightChangeDelta": 0.01,
-		"buildOnGrid": false,
-		"defaultSnapToGridCenter": false,
-		"defaultGridSubdivision": 1.0
+	"anarchyEnabled": true,
+	"anarchyHotkey": "Click to change",
+	"anarchyEnforced": false,
+	"heightChangeDelta": 0.01,
+	"defaultGridSubdivision": 1.0,
+	"defaultSnapToGridCenter": true,
+	"buildOnGrid": false
 }
