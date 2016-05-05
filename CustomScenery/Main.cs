@@ -72,7 +72,7 @@ namespace Anarchy
 			GUILayout.BeginHorizontal();
 			GUILayout.BeginVertical();
 			foreach (KeyValuePair<string, object> S in anarchy_settings) {
-				GUILayout.Label (anarchy_strings[S.Key].ToString(), labelStyle, GUILayout.Height(30));
+				GUILayout.Label (anarchy_strings.ContainsKey(S.Key)?anarchy_strings[S.Key].ToString():S.Key, labelStyle, GUILayout.Height(30));
 			}
 			GUILayout.EndVertical();
 			GUILayout.FlexibleSpace();
@@ -161,7 +161,7 @@ namespace Anarchy
 			}
 		}
 		
-        public string Name { get { return "Construction Anarchy [v2.2.0]"; } }
+        public string Name { get { return "Construction Anarchy [v2.2.1]"; } }
         public string Description { get { return "Lifts building restrictions for assets."; } }
         private string path;
 		public string Path {

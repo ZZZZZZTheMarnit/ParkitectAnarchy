@@ -1,9 +1,17 @@
 --------------------------------------------------
+2.2.1 - Settings Panel Update (2016-05-05)
+--------------------------------------------------
+Improved support for custom override settings entry
+--------------------------------------------------
+
+
+--------------------------------------------------
 2.2.0 - Settings Panel Update (2016-05-05)
 --------------------------------------------------
 Variable names in settings panel changed to be easier to read
 Settings panel updated and realigned for the new interface
 --------------------------------------------------
+
 
 --------------------------------------------------
 2.1.1 - Customisation Update (2016-03-06)
