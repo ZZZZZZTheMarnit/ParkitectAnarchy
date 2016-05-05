@@ -1,0 +1,9 @@
+{
+	"anarchyEnabled": "Anarchy Enabled",
+	"anarchyHotkey": "Anarchy Hotkey",
+	"anarchyEnforced": "Always Override Settings",
+	"heightChangeDelta": "Vertical Grid Size",
+	"defaultGridSubdivision": "Horizontal Grid Subdivision",
+	"defaultSnapToGridCenter": "Default To Grid Center",
+	"buildOnGrid": "Force On Grid"
+}
